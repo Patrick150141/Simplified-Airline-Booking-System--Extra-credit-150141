@@ -15,7 +15,7 @@ This project is a Django-based airline booking system that provides a RESTful AP
  #1.Start djangoproject
  django-admin startproject bookingsite
  cd bookingsite
- 
+
  #startapp
  python manage.py startapp booking
 
@@ -64,10 +64,14 @@ The PassengerSerializer handles serialization and deserialization for the Passen
 
 #Flight ViewSet
 The FlightViewSet provides a full set of views for the Flight model, including listing, retrieving, creating, and deleting flights.
+    queryset: Specifies the set of flights that this viewset will operate on.
+    serializer_class: Links the viewset to the FlightSerializer, ensuring that flight data is properly serialized and deserialized. 
+
 
 #Passenger ViewSet
 The PassengerViewSet provides a full set of views for the Passenger model, including listing, retrieving, creating, and deleting passengers.
-
+     queryset: Specifies the set of passengers that this viewset will operate on.
+    serializer_class: Links the viewset to the PassengerSerializer, ensuring that passenger data is properly serialized and deserialized.
 
 
 
